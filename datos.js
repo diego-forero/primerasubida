@@ -4,8 +4,8 @@ const opciones={
         demand:true
     },
     matematicas:{
-        demand:true,
-        alias:'m'
+        alias:'m',
+        demand:true
     },
     ingles:{
         demand:true,
@@ -17,9 +17,10 @@ const opciones={
     }
 }
 
-let obtenerPromedio=(nota_uno,nota_dos,nota_3)/3;
+let obtenerPromedio=(nota_uno,nota_dos,nota_tres)=>(nota_uno+nota_dos+nota_tres)/3;
 
-const argv=require('yargs').command('promedio','Calcular el primediodsasd').argv
+
+const argv=require('yargs').command('promedio','Calcular el primediodsasd',opciones).argv
 
 module.exports={
     obtenerPromedio,
